@@ -10,7 +10,7 @@
     "db:start": "redis-server",
     "prettier": "prettier --check .",
     "lint": "eslint . --ext .ts",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests"
   },
   "husky": {
     "hooks": {
