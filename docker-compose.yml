@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  db:
+    image: redis
+    volumes:
+      - ./docker/redis-data:/var/lib/redis
+    ports:
+      - '6379:6379'
+
+  app:
+    image: node:16
+    depends_on:
+      - db
+    restart: on-failure
+    ports:
+      - '5000:5000'
+    working_dir: /app
+    environment:
+      BACKEND_REDIS_URL: redis://db
+      BACKEND_REDIS_HOST: db
+    volumes:
+      - ./:/app
+    command: ['yarn', 'start']

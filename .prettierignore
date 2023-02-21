@@ -1,0 +1,5 @@
+.github/workflows/deployments.yml
+.github/workflows/main.yml
+build
+db/
+_generated.ts
