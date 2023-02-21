@@ -9,7 +9,7 @@ export const enums: JSONSchema4 = {
     environment: {
       title: 'EnumsEnvironment',
       type: 'string',
-      enum: ['local', 'production'],
+      enum: ['local', 'staging', 'production'],
     },
     mode: {
       title: 'EnumsMode',

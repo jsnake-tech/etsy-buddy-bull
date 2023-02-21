@@ -13,8 +13,12 @@ const configs: Record<
     API_HOST: 'localhost',
     CLIENT_URL: 'http://localhost:8000',
   },
+  staging: {
+    API_HOST: 'dev.bull.etsybuddy',
+    CLIENT_URL: 'https://dev.api.etsybuddy.com',
+  },
   production: {
-    API_HOST: 'bull.etsybuddy.com',
+    API_HOST: 'bull.etsybuddy',
     CLIENT_URL: 'https://api.etsybuddy.com',
   },
 };

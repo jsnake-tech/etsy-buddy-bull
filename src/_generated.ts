@@ -75,7 +75,7 @@ export type Handler<
 
 export type RootGetReply = RootGetReplyStatus200;
 
-export type EnumsEnvironment = 'local' | 'production';
+export type EnumsEnvironment = 'local' | 'staging' | 'production';
 
 export type EnumsMode = 'production' | 'development' | 'undefined';
 

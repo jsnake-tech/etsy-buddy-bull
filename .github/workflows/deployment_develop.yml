@@ -3,7 +3,7 @@ name: Deployments
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   deployment:
@@ -31,9 +31,9 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: sammyexpert/etsy-buddy-bull:production
+          tags: sammyexpert/etsy-buddy-bull:develop
           build-args: |
-            PUBLIC_ENV=production
+            PUBLIC_ENV=staging
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
