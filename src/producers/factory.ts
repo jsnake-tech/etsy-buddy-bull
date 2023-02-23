@@ -11,7 +11,7 @@ export const createQueue = (name: string, connection: ConnectionOptions) => {
 
   const job = async <T>(data: T, limit: number) =>
     await queue.add(name, data, {
-      repeat: { cron: '*/3 * * * *', limit },
+      repeat: { cron: '0 0 * * *', limit },
     });
 
   return { queue, job, scheduler };

@@ -15,11 +15,11 @@ const configs: Record<
   },
   staging: {
     API_HOST: 'dev.bull.etsybuddy',
-    CLIENT_URL: 'https://dev.api.etsybuddy.com',
+    CLIENT_URL: 'dev.api.etsybuddy.com',
   },
   production: {
     API_HOST: 'bull.etsybuddy',
-    CLIENT_URL: 'https://api.etsybuddy.com',
+    CLIENT_URL: 'api.etsybuddy.com',
   },
 };
 
