@@ -4,7 +4,8 @@ import { Handler, TaskPost } from 'src/_generated';
 import { queue } from 'src/producers/task';
 import { setDataIntoRedis } from 'src/storage/db';
 import { Task } from 'src/types';
-import { addProduct } from 'src/utils/network';
+
+//import { addProduct } from 'src/utils/network';
 
 export const options: RouteShorthandOptions = {
   schema: {
@@ -40,7 +41,7 @@ export const handler: Handler<TaskPost> = async (request, reply) => {
 
   const jobsIds: string[] = [];
 
-  await addProduct({ taskId });
+  //await addProduct({ taskId });
 
   const { id } = await queue.job<Task>({ taskId }, limit);
 
