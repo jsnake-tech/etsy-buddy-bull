@@ -40,7 +40,7 @@ export const handler: Handler<TaskPost> = async (request, reply) => {
 
   const jobsIds: string[] = [];
 
-  addProduct({ taskId });
+  await addProduct({ taskId });
 
   const { id } = await queue.job<Task>({ taskId }, limit);
 
