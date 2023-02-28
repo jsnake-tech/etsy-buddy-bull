@@ -29,6 +29,6 @@ export const handler: Handler<RootGet> = (request, reply) => {
   reply.send({
     environment: PUBLIC_ENV,
     mode: (process.env.NODE_ENV as EnumsMode) || 'undefined',
-    version: version + 'test',
+    version,
   });
 };
