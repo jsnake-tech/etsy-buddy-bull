@@ -47,7 +47,7 @@ export const handler: Handler<TaskPost> = async (request, reply) => {
 
     const jobsIds: string[] = [];
 
-    const { id } = await queue.job<Task>({ taskId }, limit - 1);
+    const { id } = await queue.job<Task>({ taskId }, limit - 1, queueID);
 
     if (id) {
       jobsIds.push(id);
