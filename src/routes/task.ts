@@ -36,6 +36,10 @@ export const options: RouteShorthandOptions = {
 export const handler: Handler<TaskPost> = async (request, reply) => {
   const { taskId, limit, userId } = request.body;
 
+  reply.send({
+    message: 'success',
+  });
+
   const { status } = await addProduct({ taskId });
 
   if (status === 'successfully') {
@@ -51,8 +55,4 @@ export const handler: Handler<TaskPost> = async (request, reply) => {
 
     await setDataIntoRedis(queueID, jobsIds);
   }
-
-  reply.send({
-    message: 'success',
-  });
 };
