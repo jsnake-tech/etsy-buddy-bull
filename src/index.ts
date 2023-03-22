@@ -10,7 +10,7 @@ import { routes } from 'src/routes';
 import { schemas } from 'src/schemas';
 
 const fastify = Fastify({
-  logger: PUBLIC_ENV === 'local',
+  logger: PUBLIC_ENV !== 'production',
   bodyLimit: BODY_LIMIT,
   ajv: {
     customOptions: { coerceTypes: false },
